@@ -18,9 +18,9 @@ public partial class StartupWindow : BaseWindow
 		HasMaximizeButton = false;
 		Visible = false;
 
-		WindowTitle = "Welcome to the s&box editor";
+		WindowTitle = "Welcome to s&box engine";
 
-		SetWindowIcon( Pixmap.FromFile( "logo_rounded.png" ) );
+		SetWindowIcon( Pixmap.FromFile( "hammer/gameobject_icon.png" ) );
 
 		CreateUI();
 	}
@@ -65,9 +65,10 @@ public partial class StartupWindow : BaseWindow
 			// Links
 			//
 			{
-				sidebar.Add( new SidebarButton( "Documentation", "school", "https://sbox.game/dev/doc/" ) );
-				sidebar.Add( new SidebarButton( $"Open {Global.BackendTitle}", "celebration", Global.BackendUrl ) );
+				sidebar.Add( new SidebarButton( "Documentation", "school", $"{Global.BackendUrl}/dev/doc" ) );
 				sidebar.Add( new SidebarButton( "API Reference", "code", $"{Global.BackendUrl}/api" ) );
+				sidebar.Add( new SidebarButton( $"Workshop (UGC)", "archive", $"{Global.BackendUrl}/ugc" ) );
+				sidebar.Add( new SidebarButton( $"Steam Workshop", "ballot", $"steamcommunity.com/workshop/browse/?appid={Application.AppId}" ) );
 			}
 
 			sidebar.AddSpacer();
