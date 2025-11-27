@@ -68,7 +68,7 @@ public partial class StartupWindow : BaseWindow
 				sidebar.Add( new SidebarButton( "Documentation", "school", $"{Global.BackendUrl}/dev/doc" ) );
 				sidebar.Add( new SidebarButton( "API Reference", "code", $"{Global.BackendUrl}/api" ) );
 				sidebar.Add( new SidebarButton( $"Workshop (UGC)", "archive", $"{Global.BackendUrl}/ugc" ) );
-				sidebar.Add( new SidebarButton( $"Steam Workshop", "ballot", $"steamcommunity.com/workshop/browse/?appid={Application.AppId}" ) );
+				sidebar.Add( new SidebarButton( $"Steam Workshop", "ballot", $"https://steamcommunity.com/workshop/browse/?appid={Application.AppId}" ) );
 			}
 
 			sidebar.AddSpacer();
